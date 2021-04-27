@@ -4,9 +4,11 @@ const BlogList = ({blogs}) => {
 
         <div className="blog-list">
               {blogs.map(blog => (
-        <div className="blog-preview" key={blog.id} >
+        <div className="blog-preview" key={blog._id} >
           <h2>{ blog.title }</h2>
-          <p>Written by { blog.author }</p>
+          <p>{ blog.date }</p>
+          <p>{ blog.price }</p>
+          <p>{ blog.seats }</p>
         </div>
       ))}
         </div>

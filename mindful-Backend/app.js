@@ -2,7 +2,7 @@
  const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const app = express();
+const app=express().use('*', cors());
 const Blog = require('./models/blog');
 
 //Database connection
@@ -63,7 +63,7 @@ var corsOptions = {
 //    })
 // });
 
-app.get('/all-events', cors(corsOptions), (req,res)=>{
+app.get('/all-events', (req,res)=>{
 Blog.find()
 .then((result)=>{
    res.send(result)

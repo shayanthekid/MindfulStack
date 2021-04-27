@@ -17,14 +17,15 @@ useEffect(()=>{
     })
     .then((data)=>{
 console.log(data);
-    })
+setBlogs(data);
+    });
 
 
 },[]);
 
 return (
     <div className="home">
-    {/* <BlogList blogs={blogs} /> */}
+    {blogs && <BlogList blogs={blogs} />}
     </div>
   );
 }
