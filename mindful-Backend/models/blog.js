@@ -26,6 +26,10 @@ const blogSchema = new Schema({
    price: {
        type: Number,
        required: true
+   },
+   image:{
+       type: String,
+       required: true
    }
 
 }, {timestamps: true});

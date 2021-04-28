@@ -33,7 +33,7 @@
   padding: 20px;
 }
 
-.blog-preview {
+/* .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
   border-bottom: 1px solid #fafafa;
@@ -45,7 +45,7 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
-}
+} */
 
 .create {
   max-width: 400px;
@@ -76,4 +76,18 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+
+
+.blog-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card{
+  background: white;
+  width: 220px;
+  height: 200px;
+  margin: 10px;
 }

@@ -43,25 +43,27 @@ var corsOptions = {
 
 // //Sandbox
 
-// app.get('/add-blog',(req,res)=>{
+//Adding test blogs
+app.get('/add-blog',(req,res)=>{
 
-//    const blog = new Blog({
-//       title : "New Blog",
-//       date: "<2021-04-03>",
-//       venueStart: 3,
-//       venueEnd:6,
-//       seats: 4,
-//       price: 3000
-//    });
+   const blog = new Blog({
+      title : "Really new blog",
+      date: "<2021-04-03>",
+      venueStart: 3,
+      venueEnd:6,
+      seats: 4,
+      price: 3000,
+      image:"image1"
+   });
 
-//    blog.save()
-//    .then((results)=>{
-// res.send(results);
-//    })
-//    .catch((err)=>{
-//       console.log(err);
-//    })
-// });
+   blog.save()
+   .then((results)=>{
+res.send(results);
+   })
+   .catch((err)=>{
+      console.log(err);
+   })
+});
 // app.get('/add-user',(req,res)=>{
 
 //    const user = new User({
