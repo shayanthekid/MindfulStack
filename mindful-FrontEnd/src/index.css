@@ -78,16 +78,36 @@
   cursor: pointer;
 }
 
-
-
-.blog-list{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  padding: 30px;
+  grid-gap: 10px;
 }
 .card{
-  background: white;
-  width: 220px;
-  height: 200px;
-  margin: 10px;
+  background-color: red;
+}
+.container{
+  position: relative;
+
+}
+img{
+  width: 100%;
+  display: block;
+}
+
+.details{
+  padding: 20px 10px;
+}
+
+.details > h3{
+  font-weight: 600;
+  font-size: 18px;
+margin: 10px 0 15px 0;
+}
+
+.details >p{
+  font-size: 15px;
+  font-weight: 400;
+  line-height:30px ;
 }
