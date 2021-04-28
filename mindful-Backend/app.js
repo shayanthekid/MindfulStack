@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app=express().use('*', cors());
 const Blog = require('./models/blog');
-
+const User = require('./models/user');
 //Database connection
 
  const dbURI = 'mongodb+srv://sajid:test123@mindful.vc3gm.mongodb.net/mindful?retryWrites=true&w=majority';
@@ -62,6 +62,24 @@ var corsOptions = {
 //       console.log(err);
 //    })
 // });
+// app.get('/add-user',(req,res)=>{
+
+//    const user = new User({
+//       username : "Sajid",
+//       password: "123"
+//    });
+
+//    user.save()
+//    .then((results)=>{
+// res.send(results);
+//    })
+//    .catch((err)=>{
+//       console.log(err);
+//    })
+// });
+
+
+
 
 app.get('/all-events', (req,res)=>{
 Blog.find()
@@ -75,15 +93,20 @@ catch((err)=>{
 
 
 
-// app.get('/single-event',(req,res)=>{
-//    Blog.findById('6087ce320ec71f3d0c98e6a3')
-//    .then((result)=>{
-//       res.send(result)
-//    }).
-//    catch((err)=>{
-//       console.log(err);
-//    })
-// })
+app.post('/single-user',(req,res)=>{
+   // console.log(req.body);
+   // const blog = new Blog(req.body);
+
+  const params = req.headers
+ 
+   User.find({"username": params.username,"password":params.password})
+   .then((result)=>{
+      res.send(result)
+   }).
+   catch((err)=>{
+      console.log(err);
+   })
+})
 
 
 

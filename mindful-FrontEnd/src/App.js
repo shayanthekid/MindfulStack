@@ -1,20 +1,32 @@
 
 import Navbar from './Navbar';
 import Home from './Home';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import Login from './Login';
+
 
 function App() {
 
-  const title = "Sajid";
-  const likes =50;
   return (
+    <Router>
     <div className="App">  
       <Navbar />
    <div className="content">
-    <Home />
-
+   <Switch>
+     <Route exact path="/">
+      <Home />
+     </Route>
+     <Route path="/events">
+      <Home />
+     </Route>
+      <Route path="/login">
+      <Login />
+     </Route>
+   </Switch>
 
    </div>
     </div>
+    </Router>
   );
 }
 
