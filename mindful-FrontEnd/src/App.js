@@ -1,8 +1,8 @@
 
-import Navbar from './Navbar';
-import Home from './Home';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
-import Login from './Login';
+import Login from './components/Login';
 
 
 function App() {
